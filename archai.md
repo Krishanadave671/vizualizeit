@@ -86,6 +86,71 @@ Better: Start with simple collaborative filtering (classic recommender systems) 
 
 Core reasons people make this mistake:
 
+Examples where AI was problem :-
+
+1. A Retail Company Tried to Use a Custom LLM for Product Recommendations
+What they did: Spent months fine-tuning a GPT-like model to recommend clothes.
+
+What happened:
+
+The model hallucinated (suggested "blue jeans" for a user searching for "winter jackets").
+
+Cost $30k+ in compute for training and infra.
+
+It still performed worse than their old basic collaborative filtering model.
+
+Lesson: Structured behavior (clicks, purchases) → classic ML wins easily.
+
+2. A Health Startup Tried to Use GPT to Predict Disease Risk
+What they did: Used GPT-3 prompts to "guess" disease likelihood from patient structured data.
+
+What happened:
+
+Predictions were random.
+
+Doctors didn't trust it because there was no explanation.
+
+Regulators rejected the product.
+
+Lesson: Risk prediction on patient data = ML classification/regression problem, not language generation.
+
+3. A Tech Company Made a "Smart Assistant" for Customer Tickets
+What they did: Built an expensive AI bot to answer customer support tickets automatically.
+
+What happened:
+
+60% of tickets were simple password reset issues.
+
+Could have been solved with a rule-based bot or a small intent classifier.
+
+AI bot made weird replies → frustrated customers.
+
+Lesson: Simple decision trees + keyword detection would have solved most tickets faster and cheaper.
+
+4. An E-commerce Platform Tried AI for Inventory Management
+What they did: Hired a team to build a generative model to predict inventory needs.
+
+What happened:
+
+They ignored historical sales trends.
+
+AI model guessed wrongly and stores overstocked the wrong items.
+
+Lesson: Time series forecasting models like ARIMA or Prophet were enough — no AI needed.
+
+5. A Financial Company Used AI for Document Search (and Regretted It)
+What they did: Used GPT-style AI to "search" compliance documents.
+
+What happened:
+
+The AI generated "plausible-sounding" but wrong answers.
+
+In compliance/legal, wrong = massive legal risk.
+
+Lesson: Retrieval-first systems (search the real document, no generation) were the correct safe move.
+
+
+
 Reason	What Happens
 Hype	"AI sounds cooler" → people jump to AI even if not needed.
 Overcomplication	Simple ML is boring, but it often works better.
